@@ -4,7 +4,7 @@ interface IPost extends Document {
   title: string;
   content: string;
   tags: string[];
-  publiched: boolean;
+  published: boolean;
   author: Schema.Types.ObjectId;
 }
 
@@ -13,7 +13,7 @@ const PostSchema: Schema = new Schema(
     title: { type: String, required: true },
     content: { type: String, required: true },
     tags: { type: [String] },
-    publiched: { type: Boolean, required: true, default: false },
+    published: { type: Boolean, required: true, default: false },
     author: { type: Schema.Types.ObjectId,required:true,ref:'User' },
   },
   { timestamps: true }
