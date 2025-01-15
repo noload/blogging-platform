@@ -20,11 +20,13 @@
   },
   "homepage": "https://github.com/noload/blogging-platform#readme",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "mongoose": "^8.9.5"
   },
   "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
     "@types/express": "^5.0.0",
     "@types/node": "^22.10.6",
     "concurrently": "^9.1.2",
