@@ -2,7 +2,7 @@ import { Request, Response } from "express";
 import { CreatePostDTO } from "../dtos/post.dto";
 import PostModel from "../models/Post";
 
-const createPost = async (req: Request<{},{},CreatePostDTO>, res: Response) => {
+const createPost = async (req: Request<{},{},CreatePostDTO>, res: Response):Promise<any> => {
   try {
     const { title, content, tags, published }: CreatePostDTO = req.body;
 
@@ -18,3 +18,5 @@ const createPost = async (req: Request<{},{},CreatePostDTO>, res: Response) => {
     return res.status(500).json({ message: "Error creating post", error });
   }
 };
+
+export default { createPost}

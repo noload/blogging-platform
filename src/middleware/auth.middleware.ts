@@ -7,7 +7,7 @@ export interface AuthRequest extends Request{
     user?:any;
 }
 
-export const authMiddleware=async(req:Request,res:Response,next:NextFunction)=>{
+export const authMiddleware=async(req:AuthRequest,res:Response,next:NextFunction):Promise<any>=>{
 
     const token = req.headers.authorization?.split(" ")[1];
 
